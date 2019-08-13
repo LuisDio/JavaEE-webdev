@@ -14,5 +14,12 @@
 			out.println(variable);
 		%>
 	</p>
+	<p>
+		<%
+			for(int i = 0; i < 5; i++) {
+				out.println("A new paragraph number " + i + " ! <br/>");
+			}
+		%>
+	</p>
 </body>
 </html>
