@@ -8,5 +8,11 @@
 </head>
 <body>
 	<p>Hello to you all!</p>
+	<p>
+		<%
+			String variable = (String) request.getAttribute("variable");
+			out.println(variable);
+		%>
+	</p>
 </body>
 </html>
