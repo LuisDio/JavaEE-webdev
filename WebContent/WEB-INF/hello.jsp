@@ -10,8 +10,13 @@
 	<p>Hello to you all!</p>
 	<p>
 		<%
-			String variable = (String) request.getAttribute("variable");
-			out.println(variable);
+			String time = (String) request.getAttribute("time");
+			if (time.equals("morning")) {
+				out.println("Good morning !!!");
+			} else {
+				out.println("Good evening !!!");
+			}
+			
 		%>
 	</p>
 	<p>

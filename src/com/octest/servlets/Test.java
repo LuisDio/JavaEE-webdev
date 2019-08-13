@@ -21,8 +21,8 @@ public class Test extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String message = "Good bye";
-		request.setAttribute("variable", message);
+		
+		request.setAttribute("time", "evening");
 		this.getServletContext().getRequestDispatcher("/WEB-INF/hello.jsp").forward(request, response);
 	}
 
