@@ -11,5 +11,10 @@
 	<p><c:out value="Bonjour !" /></p>
 	<c:set var="pseudo" value="Mateo21" scope="page" />
 	<p><c:out value="${ pseudo }"/></p>
+	
+	<c:forEach begin="0" end="10" step="1">
+		<p>A message number </p>
+	</c:forEach>
+	
 </body>
 </html>
