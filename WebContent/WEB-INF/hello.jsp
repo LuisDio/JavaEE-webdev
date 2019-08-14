@@ -9,6 +9,7 @@
 	<!-- <p>Hello to you all! ${ empty name ? '' : name}</p>
 	<p>${ noms[2] }</p> -->
 	<p><c:out value="Bonjour !" /></p>
-	<p>Hello ${ author.actif ? 'You are very active !' : 'You are not very active! ' }</p>
+	<c:set var="pseudo" value="Mateo21" scope="page" />
+	<p><c:out value="${ pseudo }"/></p>
 </body>
 </html>
