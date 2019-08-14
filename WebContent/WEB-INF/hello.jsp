@@ -8,9 +8,7 @@
 </head>
 <body>
 	<%@ include file="menu.jsp" %>
-	<p>Hello to you all!
-		<%String name = (String) request.getAttribute("name"); 
-		out.println(name);%>
-	</p>
+	<p>Hello to you all! ${ empty name ? '' : name}</p>
+	<p>${ noms[2] }</p>
 </body>
 </html>
