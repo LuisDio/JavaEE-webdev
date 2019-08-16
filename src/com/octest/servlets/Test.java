@@ -31,8 +31,9 @@ public class Test extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ConnectionForm form = new ConnectionForm();
-		form.verifierIdentifiants(request);
+		form.verifierIdentifiants(request, response);
 		request.setAttribute("form", form);
+		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/hello.jsp").forward(request, response);
 		
 	}
