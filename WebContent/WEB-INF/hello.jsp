@@ -6,13 +6,19 @@
 </head>
 <body>
 	<%@ include file="menu.jsp" %>
-	<c:if test="${ !empty name }">
-		<p><c:out value="Hello, Your name is ${ name }"/></p>
+	<c:if test="${ !empty form.resultat }">
+		<p><c:out value="${ form.resultat }"/></p>
 	</c:if>
 	
 	<form method="post" action="hello">
-		<label for="name">Name : </label>
-		<input type="text" id="name" name="name" />
+		<p>
+			<label for="login">Login : </label>
+			<input type="text" id="login" name="login" />
+		</p>
+		<p>
+			<label for="pass">Password : </label>
+			<input type="password" id="pass" name="pass" />
+		</p>
 		
 		<input type="submit" />
 	</form>
