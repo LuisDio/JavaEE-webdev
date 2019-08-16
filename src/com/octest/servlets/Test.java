@@ -23,21 +23,16 @@ public class Test extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		/*String name = request.getParameter("name");
-		request.setAttribute("name", name);
-		String[] noms = {"Mathieu", "Robert", "Francois"};
-		request.setAttribute("noms", noms); */
 		
-		Author author = new Author();
-		author.setSurname("Mathieur");
-		author.setName("Nebra");
-		author.setActif(true);
-		request.setAttribute("author", author);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/hello.jsp").forward(request, response);
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String name = request.getParameter("name");
+		request.setAttribute("name", name);
+		
+		this.getServletContext().getRequestDispatcher("/WEB-INF/hello.jsp").forward(request, response);
 		
 	}
 

@@ -6,15 +6,17 @@
 </head>
 <body>
 	<%@ include file="menu.jsp" %>
-	<!-- <p>Hello to you all! ${ empty name ? '' : name}</p>
-	<p>${ noms[2] }</p> -->
-	<p><c:out value="Bonjour !" /></p>
-	<c:set var="pseudo" value="Mateo21" scope="page" />
-	<p><c:out value="${ pseudo }"/></p>
+	<c:if test="${ !empty name }">
+		<p><c:out value="Hello, Your name is ${ name }"/></p>
+	</c:if>
 	
-	<c:forEach begin="0" end="10" step="1">
-		<p>A message number </p>
-	</c:forEach>
+	<form method="post" action="hello">
+		<label for="name">Name : </label>
+		<input type="text" id="name" name="name" />
+		
+		<input type="submit" />
+	</form>
+	
 	
 </body>
 </html>
